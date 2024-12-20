@@ -24,8 +24,18 @@
         h1 {
             text-align: center;
             font-size: 1.8em;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             color: #444;
+        }
+        .warning {
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #ffcccc;
+            border: 1px solid #ff6666;
+            border-radius: 4px;
+            color: #a00;
+            font-weight: bold;
         }
         ul {
             list-style-type: none;
@@ -75,40 +85,50 @@
             color: #555;
             font-style: italic;
         }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
+    <div class="logo">
+        <img src="media/logo.png" alt="Janitor Manifest Logo">
+    </div>
     <h1>The Janitor Manifest</h1>
     <ul>
         <li>Rule #1: I'm the one who cares.</li>
         <li>Rule #2: No good deed goes unpunished.</li>
-        <li>Rule #3: If it doesn't look like a rabbit hole, check Rule #2.</li>
+        <li>Rule #3: When attention is demanded, ignoring the shift ensures the Janitor faces compounded challenges, affirming Rules #1 and #2.</li>
     </ul>
     <div class="signature">
         <p>Sign and agree to the manifesto:</p>
         <input type="text" id="name" placeholder="Enter your name">
         <button onclick="signManifesto()">Sign</button>
-        <p id="confirmation"></p>
         <p id="commitment"></p>
+    </div>
+    <div class="warning">
+        Warning: This page is still under construction.
     </div>
 </div>
 
 <script>
     function signManifesto() {
         const name = document.getElementById('name').value;
-        const confirmation = document.getElementById('confirmation');
         const commitment = document.getElementById('commitment');
 
         if (name.trim() !== "") {
-            confirmation.textContent = `Thank you, ${name}, for agreeing to the manifesto!`;
             commitment.textContent = `I, ${name}, commit to navigating the rabbit holes and embracing their lessons.`;
         } else {
-            confirmation.textContent = "Please enter your name to sign.";
             commitment.textContent = "";
         }
     }
 </script>
 </body>
 </html>
-
