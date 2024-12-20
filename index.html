@@ -29,6 +29,7 @@
         }
         .warning {
             text-align: center;
+            margin-top: 50px;
             margin-bottom: 10px;
             padding: 10px;
             background: #ffcccc;
@@ -36,6 +37,7 @@
             border-radius: 4px;
             color: #a00;
             font-weight: bold;
+            opacity: 70%;
         }
         ul {
             list-style-type: none;
@@ -49,42 +51,6 @@
             border-left: 4px solid #007BFF;
             font-size: 1em;
         }
-        .signature {
-            margin-top: 30px;
-            text-align: center;
-        }
-        button {
-            padding: 10px 25px;
-            background: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1em;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-        input[type="text"] {
-            padding: 10px;
-            width: calc(100% - 40px);
-            margin: 10px auto;
-            display: block;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1em;
-        }
-        #confirmation, #commitment {
-            margin-top: 15px;
-            font-size: 0.95em;
-        }
-        #confirmation {
-            color: #28a745;
-        }
-        #commitment {
-            color: #555;
-            font-style: italic;
-        }
         .logo {
             text-align: center;
             margin-bottom: 20px;
@@ -93,6 +59,7 @@
             max-width: 35%;
             height: auto;
             border-radius: 8px;
+            opacity: 75%;
         }
     </style>
 </head>
@@ -107,28 +74,9 @@
         <li>Rule #2: No good deed goes unpunished.</li>
         <li>Rule #3: When attention is demanded, ignoring the shift ensures the Janitor faces compounded challenges, affirming Rules #1 and #2.</li>
     </ul>
-    <div class="signature">
-        <p>Sign and agree to the manifesto:</p>
-        <input type="text" id="name" placeholder="Enter your name">
-        <button onclick="signManifesto()">Sign</button>
-        <p id="commitment"></p>
-    </div>
     <div class="warning">
         Warning: This page is still under construction.
     </div>
 </div>
-
-<script>
-    function signManifesto() {
-        const name = document.getElementById('name').value;
-        const commitment = document.getElementById('commitment');
-
-        if (name.trim() !== "") {
-            commitment.textContent = `I, ${name}, commit to navigating the rabbit holes and embracing their lessons.`;
-        } else {
-            commitment.textContent = "";
-        }
-    }
-</script>
 </body>
 </html>
